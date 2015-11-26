@@ -6,6 +6,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
     <name>SEM</name>
+    
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -26,4 +27,22 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>sample.plugin</groupId>
+                <artifactId>hello-maven-plugin</artifactId>
+                <version>1.0</version>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>sayhi</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
